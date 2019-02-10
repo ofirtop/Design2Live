@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LivePage</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onresize="onResize()">
+    <div class="screen" onclick="toggleMenu()"></div>
+    <header class="header-wrapper flex space-around align-center">
+        <button class="mobile-menu-button" onclick="toggleMenu()">☰</button>
+        <div class="inner-header-wrapper flex space-between align-center">
+            <a href="#" class="logo">
+                <!--WHY THE '.' IN THE LOGO does not obey to the letter spacing ?-->
+                <span class="letter-spacing-logo">B</span>login<span class="period-logo letter-spacing-logo">.</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="flex clean-list nav-items-wrapper">
+                    <li><a href="#"><span class="letter-spacing">J</span>ornal</a></li>
+                    <li><a href="#"><span class="letter-spacing">A</span>bout</a></li>
+                    <li><a href="#"><span class="letter-spacing">W</span>ork</a></li>
+                    <li><a href="#"><span class="letter-spacing">C</span>ontact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="flex main-wrapper space-around">
+        <div class="main-inner-wraper">
+
+            <div class="blog-item flex">
+                <img class="blog-image" src="img/001.png" alt="">
+                <div class="flex-col text-wrapper space-between">
+                    <div class="flex-col align-start">
+                        <h2 class="blog-title">Duis aute irure dolor in
+                            henderit in voluptate.</h2>
+                        <p class="blog-text">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu fugiat nulla pariatur...
+                        </p>
+                    </div>
+                    <button>Continue Reading</button>
+                </div>
+            </div>
+
+            <div class="blog-item flex">
+                <img class="blog-image" src="img/002.png" alt="">
+                <div class="flex-col text-wrapper space-between">
+                    <div class="flex-col align-start">
+                        <h2 class="blog-title">Duis aute irure dolor in
+                            henderit in voluptate.</h2>
+                        <p class="blog-text">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu fugiat nulla pariatur...
+                        </p>
+                    </div>
+                    <button>Continue Reading</button>
+                </div>
+            </div>
+
+            <div class="blog-item flex">
+                <img class="blog-image" src="img/003.png" alt="">
+                <div class="flex-col text-wrapper space-between">
+                    <div class="flex-col align-start">
+                        <h2 class="blog-title">Duis aute irure dolor in
+                            henderit in voluptate.</h2>
+                        <p class="blog-text">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu fugiat nulla pariatur...
+                        </p>
+                    </div>
+                    <button>Continue Reading</button>
+                </div>
+            </div>
+
+            <div class="flex space-between next-previous">
+                <div>previous</div>
+                <div>next</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="flex-col align-center">
+        <div class="logo-footer">
+            <span class="letter-spacing-logo">B</span>login
+            <span class="period-logo letter-spacing-logo">.</span>
+        </div>
+        <div class="copyright"><span>©</span> 2014 Blogin.com - All Rights Reserved - Find more free Templates at <span
+                class="pixelhint">Pixelhint.com</span></div>
+        <div class="flex social-wrapper ">
+            <a class="social flex align-center space-around"><img src="img/F.png"></a>
+            <a class="social flex align-center space-around"><img src="img/L.png"></a>
+            <a class="social flex align-center space-around"><img src="img/E.png"></a>
+            <a class="social flex align-center space-around"><img src="img/D.png"></a>
+        </div>
+        <script>
+            function toggleMenu() {
+                document.querySelector('.screen').classList.toggle('active');
+                document.querySelector('.main-nav').classList.toggle('side-nav-active');
+            }
+
+            function onResize() {
+                var lastX = window.innerWidth;
+
+
+                if (lastX > 750 && isSideNavActive()) {
+                    document.querySelector('.main-nav').classList.toggle('side-nav-active');
+                    document.querySelector('.screen').classList.toggle('active');
+                }
+            }
+
+            function isSideNavActive() {
+                return document.querySelector('.main-nav').classList.contains('side-nav-active');
+            }
+        </script>
+    </footer>
+</body>
+
+</html>
